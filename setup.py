@@ -11,7 +11,9 @@ setup(
     description="Missing description.",
     long_description=(Path(__file__).parent / 'README.md').read_text(encoding='utf-8'),
     long_description_content_type="text/markdown",
-    install_requires=[],
+    install_requires=[
+        'generallibrary',
+    ],
     url="https://github.com/ManderaGeneral/generalbrowser",
     license="mit",
     python_requires=">=3.8, <3.10",
