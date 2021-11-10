@@ -6,7 +6,7 @@ This package and 4 other make up [ManderaGeneral](https://github.com/Mandera).
 ## Information
 | Package                                                            | Ver                                               | Latest Release       | Python                                                                                                                   | Platform        |   Lvl | Todo                                                       | Tests   |
 |:-------------------------------------------------------------------|:--------------------------------------------------|:---------------------|:-------------------------------------------------------------------------------------------------------------------------|:----------------|------:|:-----------------------------------------------------------|:--------|
-| [generalbrowser](https://github.com/ManderaGeneral/generalbrowser) | [0.0.1](https://pypi.org/project/generalbrowser/) | 2021-11-10 18:02 CET | [3.8](https://www.python.org/downloads/release/python-380/), [3.9](https://www.python.org/downloads/release/python-390/) | Windows, Ubuntu |     1 | [1](https://github.com/ManderaGeneral/generalbrowser#Todo) | 100 %   |
+| [generalbrowser](https://github.com/ManderaGeneral/generalbrowser) | [0.0.1](https://pypi.org/project/generalbrowser/) | 2021-11-10 17:43 CET | [3.8](https://www.python.org/downloads/release/python-380/), [3.9](https://www.python.org/downloads/release/python-390/) | Windows, Ubuntu |     1 | [1](https://github.com/ManderaGeneral/generalbrowser#Todo) | 100 %   |
 
 ## Contents
 <pre>
@@ -34,5 +34,5 @@ This package and 4 other make up [ManderaGeneral](https://github.com/Mandera).
 | <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/__init__.py#L1'>__init__.py</a> | <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/__init__.py#L1'>[UnitTest] for Module: generalbrowser</a> |
 
 <sup>
-Generated 2021-11-10 18:02 CET for commit <a href='https://github.com/ManderaGeneral/generalbrowser/commit/master'>master</a>.
+Generated 2021-11-10 18:15 CET for commit <a href='https://github.com/ManderaGeneral/generalbrowser/commit/master'>master</a>.
 </sup>
