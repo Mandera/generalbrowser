@@ -1,1 +1,10 @@
-{"enabled": true, "name": "generalbrowser", "version": "0.0.1", "description": "Missing description.", "install_requires": [], "extras_require": {}, "topics": [], "manifest": []}
+{
+    "enabled": true,
+    "name": "generalbrowser",
+    "version": "0.0.1",
+    "description": "Missing description.",
+    "install_requires": ["generallibrary"],
+    "extras_require": {},
+    "topics": [],
+    "manifest": []
+}
