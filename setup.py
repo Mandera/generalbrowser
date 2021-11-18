@@ -12,7 +12,7 @@ setup(
     name="generalbrowser",
     author='Rickard "Mandera" Abraham',
     author_email="rickard.abraham@gmail.com",
-    version="0.0.1",
+    version="0.0.2",
     description="Missing description.",
     long_description=long_description,
     long_description_content_type="text/markdown",
