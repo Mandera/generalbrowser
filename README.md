@@ -6,7 +6,7 @@ This package and 5 other make up [ManderaGeneral](https://github.com/ManderaGene
 ## Information
 | Package                                                            | Ver                                               | Latest Release       | Python                                                                                                                   | Platform        |   Lvl | Todo                                                       | Tests   |
 |:-------------------------------------------------------------------|:--------------------------------------------------|:---------------------|:-------------------------------------------------------------------------------------------------------------------------|:----------------|------:|:-----------------------------------------------------------|:--------|
-| [generalbrowser](https://github.com/ManderaGeneral/generalbrowser) | [0.0.2](https://pypi.org/project/generalbrowser/) | 2021-11-19 00:33 CET | [3.8](https://www.python.org/downloads/release/python-380/), [3.9](https://www.python.org/downloads/release/python-390/) | Windows, Ubuntu |     1 | [1](https://github.com/ManderaGeneral/generalbrowser#Todo) | 100 %   |
+| [generalbrowser](https://github.com/ManderaGeneral/generalbrowser) | [0.0.2](https://pypi.org/project/generalbrowser/) | 2021-11-19 00:34 CET | [3.8](https://www.python.org/downloads/release/python-380/), [3.9](https://www.python.org/downloads/release/python-390/) | Windows, Ubuntu |     1 | [1](https://github.com/ManderaGeneral/generalbrowser#Todo) | 100 %   |
 
 ## Contents
 <pre>
@@ -25,7 +25,7 @@ This package and 5 other make up [ManderaGeneral](https://github.com/ManderaGene
 
 ## Attributes
 <pre>
-<a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/__init__.py#L1'>Module: generalbrowser</a> <b>(Untested)</b>
+<a href='https://github.com/ManderaGeneral/generalbrowser/blob/52605ce/generalbrowser/__init__.py#L1'>Module: generalbrowser</a> <b>(Untested)</b>
 </pre>
 
 ## Todo
@@ -34,5 +34,5 @@ This package and 5 other make up [ManderaGeneral](https://github.com/ManderaGene
 | <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/__init__.py#L1'>__init__.py</a> | <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/__init__.py#L1'>[UnitTest] for Module: generalbrowser</a> |
 
 <sup>
-Generated 2021-11-19 00:33 CET for commit <a href='https://github.com/ManderaGeneral/generalbrowser/commit/master'>master</a>.
+Generated 2021-11-19 00:34 CET for commit <a href='https://github.com/ManderaGeneral/generalbrowser/commit/52605ce'>52605ce</a>.
 </sup>
