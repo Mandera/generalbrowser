@@ -34,5 +34,5 @@ This package and 6 other make up [ManderaGeneral](https://github.com/ManderaGene
 | <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/__init__.py#L1'>__init__.py</a> | <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/__init__.py#L1'>[UnitTest] for Module: generalbrowser</a> |
 
 <sup>
-Generated 2021-11-19 18:46 CET for commit <a href='https://github.com/ManderaGeneral/generalbrowser/commit/master'>master</a>.
+Generated 2021-11-19 19:04 CET for commit <a href='https://github.com/ManderaGeneral/generalbrowser/commit/master'>master</a>.
 </sup>
