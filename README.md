@@ -44,5 +44,5 @@ This package and 5 other make up [ManderaGeneral](https://github.com/ManderaGene
 | <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/domain.py#L1'>domain.py</a>     | <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/domain.py#L16'>[UnitTest] for Method: url</a>             |
 
 <sup>
-Generated 2021-11-22 16:13 CET for commit <a href='https://github.com/ManderaGeneral/generalbrowser/commit/master'>master</a>.
+Generated 2021-11-22 16:15 CET for commit <a href='https://github.com/ManderaGeneral/generalbrowser/commit/master'>master</a>.
 </sup>
