@@ -6,7 +6,7 @@ This package and 6 other make up [ManderaGeneral](https://github.com/ManderaGene
 ## Information
 | Package                                                            | Ver                                               | Latest Release       | Python                                                                                                                   | Platform        |   Lvl | Todo                                                       | Tests   |
 |:-------------------------------------------------------------------|:--------------------------------------------------|:---------------------|:-------------------------------------------------------------------------------------------------------------------------|:----------------|------:|:-----------------------------------------------------------|:--------|
-| [generalbrowser](https://github.com/ManderaGeneral/generalbrowser) | [0.0.3](https://pypi.org/project/generalbrowser/) | 2021-11-27 21:33 CET | [3.8](https://www.python.org/downloads/release/python-380/), [3.9](https://www.python.org/downloads/release/python-390/) | Windows, Ubuntu |     1 | [6](https://github.com/ManderaGeneral/generalbrowser#Todo) | -20.0 % |
+| [generalbrowser](https://github.com/ManderaGeneral/generalbrowser) | [0.0.3](https://pypi.org/project/generalbrowser/) | 2021-11-27 21:34 CET | [3.8](https://www.python.org/downloads/release/python-380/), [3.9](https://www.python.org/downloads/release/python-390/) | Windows, Ubuntu |     1 | [6](https://github.com/ManderaGeneral/generalbrowser#Todo) | -20.0 % |
 
 ## Contents
 <pre>
@@ -25,12 +25,12 @@ This package and 6 other make up [ManderaGeneral](https://github.com/ManderaGene
 
 ## Attributes
 <pre>
-<a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/__init__.py#L1'>Module: generalbrowser</a> <b>(Untested)</b>
-└─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/domain.py#L8'>Class: Domain</a> <b>(Untested)</b>
-   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/domain.py#L32'>Method: get</a> <b>(Untested)</b>
-   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/domain.py#L29'>Method: post</a> <b>(Untested)</b>
-   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/domain.py#L19'>Method: store_session</a> <b>(Untested)</b>
-   └─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/domain.py#L16'>Method: url</a> <b>(Untested)</b>
+<a href='https://github.com/ManderaGeneral/generalbrowser/blob/8307f8a/generalbrowser/__init__.py#L1'>Module: generalbrowser</a> <b>(Untested)</b>
+└─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/8307f8a/generalbrowser/domain.py#L1'>Class: Domain</a> <b>(Untested)</b>
+   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/8307f8a/generalbrowser/domain.py#L1'>Method: get</a> <b>(Untested)</b>
+   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/8307f8a/generalbrowser/domain.py#L1'>Method: post</a> <b>(Untested)</b>
+   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/8307f8a/generalbrowser/domain.py#L1'>Method: store_session</a> <b>(Untested)</b>
+   └─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/8307f8a/generalbrowser/domain.py#L1'>Method: url</a> <b>(Untested)</b>
 </pre>
 
 ## Todo
@@ -44,5 +44,5 @@ This package and 6 other make up [ManderaGeneral](https://github.com/ManderaGene
 | <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/domain.py#L1'>domain.py</a>     | <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/domain.py#L16'>[UnitTest] for Method: url</a>             |
 
 <sup>
-Generated 2021-11-27 21:33 CET for commit <a href='https://github.com/ManderaGeneral/generalbrowser/commit/master'>master</a>.
+Generated 2021-11-27 21:34 CET for commit <a href='https://github.com/ManderaGeneral/generalbrowser/commit/8307f8a'>8307f8a</a>.
 </sup>
