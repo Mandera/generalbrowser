@@ -3,7 +3,7 @@
     "private": false,
     "installable": true,
     "name": "generalbrowser",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Missing description.",
     "install_requires": [
         "generallibrary"
