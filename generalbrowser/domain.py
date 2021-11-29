@@ -23,22 +23,30 @@ class Domain(metaclass=AutoInitBases):
     def store_session(self):
         self.session_path.pickle.write(self.session, overwrite=True)
 
-    def _request(self, method, endpoint, files=None, **data):
+    def _request(self, method, endpoint, filepath=None, **data):
         url = self.url(endpoint=endpoint)
-        result = method(url=url, files=files, data=data)
+
+        if filepath is not None:
+            path = Path(filepath)
+            with open(path, "rb") as file:
+                files = {path.name(): file}
+                result = method(url=url, files=files, data=data)
+        else:
+            result = method(url=url, data=data)
+
         self.store_session()
         # print(result.text)
         return result
 
-    def post(self, endpoint, files=None, **data):
+    def post(self, endpoint, filepath=None, **data):
         """ :param endpoint: 
-            :param files: Dict of files or None. """
-        return self._request(method=self.session.post, endpoint=endpoint, files=files, **data)
+            :param filepath: Path to file or None. """
+        return self._request(method=self.session.post, endpoint=endpoint, filepath=filepath, **data)
 
-    def get(self, endpoint, files=None, **data):
+    def get(self, endpoint, filepath=None, **data):
         """ :param endpoint: 
-            :param files: Dict of files or None. """
-        return self._request(method=self.session.get, endpoint=endpoint, files=files, **data)
+            :param filepath: Path to file or None. """
+        return self._request(method=self.session.get, endpoint=endpoint, filepath=filepath, **data)
 
     @staticmethod
     def render_response(response):
@@ -46,13 +54,6 @@ class Domain(metaclass=AutoInitBases):
         path = Path.get_cache_dir() / "python/response.htm"  # type: Path
         path.text.write(response.text, overwrite=True)
         webbrowser.open(str(path))
-
-    @staticmethod
-    def file_to_request(name, path):
-        """ Return a dictionary of files to be used in request. """
-        path = Path(path)
-        with open(path, "rb") as file:
-            return {name: file}
 
     @staticmethod
     def response_to_file(response, path):
