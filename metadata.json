@@ -1,7 +1,6 @@
 {
     "enabled": true,
     "private": false,
-    "installable": true,
     "name": "generalbrowser",
     "version": "0.0.3",
     "description": "Missing description.",
