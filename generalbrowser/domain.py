@@ -1,8 +1,8 @@
 
-
-from requests import Session
+from requests import Session, Response, exceptions
 import webbrowser
 import re
+from unittest.mock import Mock
 
 from generalfile import Path
 from generallibrary import AutoInitBases
@@ -10,7 +10,8 @@ from generallibrary import AutoInitBases
 
 class Domain(metaclass=AutoInitBases):
     """ Client methods to talk to API. """
-    session_path = Path.get_cache_dir() / "python/session.txt"
+    session_path = Path.get_cache_dir() / "generalbrowser/session.txt"
+
     def __init__(self, domain):
         self.domain = domain
 
@@ -24,15 +25,19 @@ class Domain(metaclass=AutoInitBases):
         self.session_path.pickle.write(self.session, overwrite=True)
 
     def _request(self, method, endpoint, filepath=None, **data):
+        """ :rtype: Response """
         url = self.url(endpoint=endpoint)
 
-        if filepath is not None:
-            path = Path(filepath)
-            with open(path, "rb") as file:
-                files = {path.name(): file}
-                result = method(url=url, files=files, data=data)
-        else:
-            result = method(url=url, data=data)
+        try:
+            if filepath is not None:
+                path = Path(filepath)
+                with open(path, "rb") as file:
+                    files = {path.name(): file}
+                    result = method(url=url, files=files, data=data)
+            else:
+                result = method(url=url, data=data)
+        except exceptions.ConnectionError as e:
+            return Mock(spec=Response, status_code=400, text=f"Connection failed for {self.domain}")
 
         self.store_session()
         # print(result.text)
