@@ -6,7 +6,7 @@ This package and 6 other make up [ManderaGeneral](https://github.com/ManderaGene
 ## Information
 | Package                                                            | Ver                                               | Latest Release       | Python                                                                                                                   | Platform        |   Lvl | Todo                                                       | Tests   |
 |:-------------------------------------------------------------------|:--------------------------------------------------|:---------------------|:-------------------------------------------------------------------------------------------------------------------------|:----------------|------:|:-----------------------------------------------------------|:--------|
-| [generalbrowser](https://github.com/ManderaGeneral/generalbrowser) | [0.0.7](https://pypi.org/project/generalbrowser/) | 2021-12-10 18:58 CET | [3.8](https://www.python.org/downloads/release/python-380/), [3.9](https://www.python.org/downloads/release/python-390/) | Windows, Ubuntu |     1 | [8](https://github.com/ManderaGeneral/generalbrowser#Todo) | -14.3 % |
+| [generalbrowser](https://github.com/ManderaGeneral/generalbrowser) | [0.0.7](https://pypi.org/project/generalbrowser/) | 2021-12-10 18:59 CET | [3.8](https://www.python.org/downloads/release/python-380/), [3.9](https://www.python.org/downloads/release/python-390/) | Windows, Ubuntu |     1 | [8](https://github.com/ManderaGeneral/generalbrowser#Todo) | -14.3 % |
 
 ## Contents
 <pre>
@@ -25,14 +25,14 @@ This package and 6 other make up [ManderaGeneral](https://github.com/ManderaGene
 
 ## Attributes
 <pre>
-<a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/__init__.py#L1'>Module: generalbrowser</a> <b>(Untested)</b>
-└─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/domain.py#L11'>Class: Domain</a> <b>(Untested)</b>
-   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/domain.py#L57'>Method: get</a> <b>(Untested)</b>
-   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/domain.py#L52'>Method: post</a> <b>(Untested)</b>
-   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/domain.py#L62'>Method: render_response</a> <b>(Untested)</b>
-   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/domain.py#L69'>Method: response_to_file</a> <b>(Untested)</b>
-   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/domain.py#L25'>Method: store_session</a> <b>(Untested)</b>
-   └─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/domain.py#L22'>Method: url</a> <b>(Untested)</b>
+<a href='https://github.com/ManderaGeneral/generalbrowser/blob/fa96d1e/generalbrowser/__init__.py#L1'>Module: generalbrowser</a> <b>(Untested)</b>
+└─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/fa96d1e/generalbrowser/domain.py#L1'>Class: Domain</a> <b>(Untested)</b>
+   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/fa96d1e/generalbrowser/domain.py#L1'>Method: get</a> <b>(Untested)</b>
+   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/fa96d1e/generalbrowser/domain.py#L1'>Method: post</a> <b>(Untested)</b>
+   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/fa96d1e/generalbrowser/domain.py#L1'>Method: render_response</a> <b>(Untested)</b>
+   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/fa96d1e/generalbrowser/domain.py#L1'>Method: response_to_file</a> <b>(Untested)</b>
+   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/fa96d1e/generalbrowser/domain.py#L1'>Method: store_session</a> <b>(Untested)</b>
+   └─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/fa96d1e/generalbrowser/domain.py#L1'>Method: url</a> <b>(Untested)</b>
 </pre>
 
 ## Todo
@@ -48,5 +48,5 @@ This package and 6 other make up [ManderaGeneral](https://github.com/ManderaGene
 | <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/domain.py#L1'>domain.py</a>     | <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/domain.py#L22'>[UnitTest] for Method: url</a>              |
 
 <sup>
-Generated 2021-12-10 18:58 CET for commit <a href='https://github.com/ManderaGeneral/generalbrowser/commit/master'>master</a>.
+Generated 2021-12-10 18:59 CET for commit <a href='https://github.com/ManderaGeneral/generalbrowser/commit/fa96d1e'>fa96d1e</a>.
 </sup>
