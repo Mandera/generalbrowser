@@ -11,6 +11,7 @@ from generallibrary import AutoInitBases
 class Domain(metaclass=AutoInitBases):
     """ Client methods to talk to API. """
     session_path = Path.get_cache_dir() / "generalbrowser/session.txt"
+    debug = False
 
     def __init__(self, domain):
         self.domain = domain
@@ -33,15 +34,20 @@ class Domain(metaclass=AutoInitBases):
                 path = Path(filepath)
                 with open(path, "rb") as file:
                     files = {path.name(): file}
-                    result = method(url=url, files=files, data=data)
+                    response = method(url=url, files=files, data=data)
             else:
-                result = method(url=url, data=data)
+                response = method(url=url, data=data)
         except exceptions.ConnectionError as e:
-            return Mock(spec=Response, status_code=400, text=f"Connection failed for {self.domain}")
+            response = Mock(spec=Response, status_code=400, text=f"Connection failed for {self.domain}")
+        
+        else:  # Don't think we should update session on connection fail
+            self.store_session()
 
-        self.store_session()
-        # print(result.text)
-        return result
+        # https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+        if self.debug and str(response.status_code)[0] != "2":
+            self.render_response(response)
+        
+        return response
 
     def post(self, endpoint, filepath=None, **data):
         """ :param endpoint: 
