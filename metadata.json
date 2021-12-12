@@ -5,7 +5,12 @@
     "version": "0.0.7",
     "description": "Missing description.",
     "install_requires": [
-        "generallibrary"
+        "generallibrary",
+        "generalfile",
+        "django",
+        "djangorestframework",
+        "dill",
+        "requests"
     ],
     "extras_require": {},
     "topics": [],

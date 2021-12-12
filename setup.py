@@ -18,6 +18,11 @@ setup(
     long_description_content_type="text/markdown",
     install_requires=[
         'generallibrary',
+        'generalfile',
+        'django',
+        'djangorestframework',
+        'dill',
+        'requests',
     ],
     url="https://github.com/ManderaGeneral/generalbrowser",
     license="mit",

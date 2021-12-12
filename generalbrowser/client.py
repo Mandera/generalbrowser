@@ -3,13 +3,14 @@ from requests import Session, Response, exceptions
 import webbrowser
 import re
 from unittest.mock import Mock
+from dill import loads
 
+from generalbrowser.shared import _GeneralShared
 from generalfile import Path
-from generallibrary import AutoInitBases
 
 
-class Domain(metaclass=AutoInitBases):
-    """ Client methods to talk to API. """
+class GeneralClient(_GeneralShared):
+    """ Client methods to talk to server. """
     session_path = Path.get_cache_dir() / "generalbrowser/session.txt"
     debug = False
 
@@ -58,6 +59,10 @@ class Domain(metaclass=AutoInitBases):
         """ :param endpoint: 
             :param filepath: Path to file or None. """
         return self._request(method=self.session.get, endpoint=endpoint, filepath=filepath, **data)
+
+    def deserialize(self, response):
+        """ Return list of client models. """
+        return loads(response.content)
 
     @staticmethod
     def render_response(response):
