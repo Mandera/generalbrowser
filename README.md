@@ -6,7 +6,7 @@ This package and 6 other make up [ManderaGeneral](https://github.com/ManderaGene
 ## Information
 | Package                                                            | Ver                                               | Latest Release       | Python                                                                                                                   | Platform        |   Lvl | Todo                                                        | Tests   |
 |:-------------------------------------------------------------------|:--------------------------------------------------|:---------------------|:-------------------------------------------------------------------------------------------------------------------------|:----------------|------:|:------------------------------------------------------------|:--------|
-| [generalbrowser](https://github.com/ManderaGeneral/generalbrowser) | [0.0.6](https://pypi.org/project/generalbrowser/) | 2021-12-10 18:59 CET | [3.8](https://www.python.org/downloads/release/python-380/), [3.9](https://www.python.org/downloads/release/python-390/) | Windows, Ubuntu |     2 | [18](https://github.com/ManderaGeneral/generalbrowser#Todo) | -6.3 %  |
+| [generalbrowser](https://github.com/ManderaGeneral/generalbrowser) | [0.0.8](https://pypi.org/project/generalbrowser/) | 2021-12-18 14:03 CET | [3.8](https://www.python.org/downloads/release/python-380/), [3.9](https://www.python.org/downloads/release/python-390/) | Windows, Ubuntu |     2 | [18](https://github.com/ManderaGeneral/generalbrowser#Todo) | -6.3 %  |
 
 ## Contents
 <pre>
@@ -67,5 +67,5 @@ This package and 6 other make up [ManderaGeneral](https://github.com/ManderaGene
 | <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/server.py#L1'>server.py</a>     | <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/server.py#L33'>[UnitTest] for Method: success</a>                                                                 |
 
 <sup>
-Generated 2021-12-12 18:11 CET for commit <a href='https://github.com/ManderaGeneral/generalbrowser/commit/master'>master</a>.
+Generated 2021-12-18 14:03 CET for commit <a href='https://github.com/ManderaGeneral/generalbrowser/commit/master'>master</a>.
 </sup>
