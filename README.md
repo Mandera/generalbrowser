@@ -25,23 +25,23 @@ This package and 6 other make up [ManderaGeneral](https://github.com/ManderaGene
 
 ## Attributes
 <pre>
-<a href='https://github.com/ManderaGeneral/generalbrowser/blob/90474b6/generalbrowser/__init__.py#L1'>Module: generalbrowser</a> <b>(Untested)</b>
-├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/90474b6/generalbrowser/client.py#L1'>Class: GeneralClient</a> <b>(Untested)</b>
-│  ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/90474b6/generalbrowser/client.py#L1'>Method: deserialize</a> <b>(Untested)</b>
-│  ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/90474b6/generalbrowser/client.py#L1'>Method: get</a> <b>(Untested)</b>
-│  ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/90474b6/generalbrowser/client.py#L1'>Method: post</a> <b>(Untested)</b>
-│  ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/90474b6/generalbrowser/client.py#L1'>Method: render_response</a> <b>(Untested)</b>
-│  ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/90474b6/generalbrowser/client.py#L1'>Method: response_to_file</a> <b>(Untested)</b>
-│  ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/90474b6/generalbrowser/client.py#L1'>Method: store_session</a> <b>(Untested)</b>
-│  └─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/90474b6/generalbrowser/client.py#L1'>Method: url</a> <b>(Untested)</b>
-└─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/90474b6/generalbrowser/server.py#L1'>Class: GeneralServer</a> <b>(Untested)</b>
-   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/90474b6/generalbrowser/server.py#L1'>Property: data</a> <b>(Untested)</b>
-   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/90474b6/generalbrowser/server.py#L1'>Method: extract_data</a> <b>(Untested)</b>
-   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/90474b6/generalbrowser/server.py#L1'>Method: fail</a> <b>(Untested)</b>
-   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/90474b6/generalbrowser/server.py#L1'>Method: scrub_email</a> <b>(Untested)</b>
-   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/90474b6/generalbrowser/server.py#L1'>Method: scrub_password</a> <b>(Untested)</b>
-   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/90474b6/generalbrowser/server.py#L1'>Method: serialize</a> <b>(Untested)</b>
-   └─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/90474b6/generalbrowser/server.py#L1'>Method: success</a> <b>(Untested)</b>
+<a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/__init__.py#L1'>Module: generalbrowser</a> <b>(Untested)</b>
+├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/client.py#L12'>Class: GeneralClient</a> <b>(Untested)</b>
+│  ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/client.py#L63'>Method: deserialize</a> <b>(Untested)</b>
+│  ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/client.py#L58'>Method: get</a> <b>(Untested)</b>
+│  ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/client.py#L53'>Method: post</a> <b>(Untested)</b>
+│  ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/client.py#L67'>Method: render_response</a> <b>(Untested)</b>
+│  ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/client.py#L74'>Method: response_to_file</a> <b>(Untested)</b>
+│  ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/client.py#L26'>Method: store_session</a> <b>(Untested)</b>
+│  └─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/client.py#L23'>Method: url</a> <b>(Untested)</b>
+└─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/server.py#L11'>Class: GeneralServer</a> <b>(Untested)</b>
+   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/server.py#L16'>Property: data</a> <b>(Untested)</b>
+   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/server.py#L20'>Method: extract_data</a> <b>(Untested)</b>
+   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/server.py#L44'>Method: fail</a> <b>(Untested)</b>
+   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/server.py#L56'>Method: scrub_email</a> <b>(Untested)</b>
+   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/server.py#L59'>Method: scrub_password</a> <b>(Untested)</b>
+   ├─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/server.py#L27'>Method: serialize</a> <b>(Untested)</b>
+   └─ <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/server.py#L33'>Method: success</a> <b>(Untested)</b>
 </pre>
 
 ## Todo
@@ -67,5 +67,5 @@ This package and 6 other make up [ManderaGeneral](https://github.com/ManderaGene
 | <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/server.py#L1'>server.py</a>     | <a href='https://github.com/ManderaGeneral/generalbrowser/blob/master/generalbrowser/server.py#L33'>[UnitTest] for Method: success</a>                                                                 |
 
 <sup>
-Generated 2021-12-18 14:04 CET for commit <a href='https://github.com/ManderaGeneral/generalbrowser/commit/90474b6'>90474b6</a>.
+Generated 2021-12-23 13:55 CET for commit <a href='https://github.com/ManderaGeneral/generalbrowser/commit/master'>master</a>.
 </sup>
