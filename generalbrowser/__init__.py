@@ -1,3 +1,3 @@
 
-from generalbrowser.client import GeneralClient
-from generalbrowser.server import GeneralServer
+from generalbrowser.base.client import GeneralClient
+from generalbrowser.base.server import GeneralServer

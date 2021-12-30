@@ -5,20 +5,28 @@ import re
 from unittest.mock import Mock
 from dill import loads
 
-from generalbrowser.shared import _GeneralShared
+from generalbrowser.base.client_and_server import _GeneralClientAndServer
 from generalfile import Path
 
 
-class GeneralClient(_GeneralShared):
+class GeneralClient(_GeneralClientAndServer):
     """ Client methods to talk to server. """
     session_path = Path.get_cache_dir() / "generalbrowser/session.txt"
     debug = False
+
+    client_page = ...
 
     def __init__(self, domain):
         self.domain = domain
 
         stored_session = self.session_path.pickle.read(default=None)
         self.session = stored_session or Session()
+
+    def create_page(self, parent=None):
+        """ Create page which should be a GUI for entire client. """
+        return self.client_page(client=self, parent=parent)
+
+
 
     def url(self, endpoint):
         return f"{self.domain}/api/{endpoint}"

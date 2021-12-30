@@ -19,6 +19,7 @@ setup(
     install_requires=[
         'generallibrary',
         'generalfile',
+        'generalgui',
         'django',
         'djangorestframework',
         'dill',

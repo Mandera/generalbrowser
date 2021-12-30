@@ -4,11 +4,11 @@ from rest_framework.exceptions import ValidationError
 from django.http import HttpResponse
 from dill import dumps
 
-from generalbrowser.shared import _GeneralShared
+from generalbrowser.base.client_and_server import _GeneralClientAndServer
 from generallibrary import deco_optional_suppress
 
 
-class GeneralServer(_GeneralShared):
+class GeneralServer(_GeneralClientAndServer):
     """ Server methods to talk to client. """
     _error = ValidationError
 
