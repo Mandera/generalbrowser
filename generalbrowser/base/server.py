@@ -4,10 +4,22 @@ from django.http import HttpResponse
 from dill import dumps
 
 from generalbrowser.base.client_and_server import _GeneralClientAndServer
+from generallibrary import getBaseClassNames
 
 
 class GeneralServer(_GeneralClientAndServer):
     """ Server methods to talk to client. """
+    def __init__(self):
+        assert "APIView" in getBaseClassNames(self)  # from rest_framework.views import APIView
+
+    def session(self, *args, **kwargs):
+        """ Set session values with kwargs and return session values with args.
+
+            :param rest_framework.views.APIView or GeneralServer self: """
+        for key, value in kwargs.items():
+            self.request.session[key] = value
+        return [self.request.session[key] for key in args]
+
     @property
     def data(self):
         """ Dictionary of POST values.

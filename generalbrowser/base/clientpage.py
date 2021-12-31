@@ -14,8 +14,8 @@ class GeneralClientPage(Page):
         self.mainpage = getattr(self.get_parent(), "mainpage", None) or self
 
 
-class _GeneralModelPage(GeneralClientPage):
+class GeneralModelPage(GeneralClientPage):
     """ All pages that display a specific model should inherit this. """
-    def __init__(self, model, parent=None):
+    def __init__(self, model=None, parent=None):
         self.model = model
 
