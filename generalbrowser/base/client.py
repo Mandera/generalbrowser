@@ -3,8 +3,8 @@ from requests import Session, Response, exceptions
 import webbrowser
 import re
 from unittest.mock import Mock
-from dill import loads
 
+from generallibrary import loads
 from generalbrowser.base.client_and_server import _GeneralClientAndServer
 from generalfile import Path
 
@@ -70,7 +70,7 @@ class GeneralClient(_GeneralClientAndServer):
 
     def deserialize(self, response):
         """ Return list of client models. """
-        return loads(response.content)
+        return loads(response.text)
 
     @staticmethod
     def render_response(response):

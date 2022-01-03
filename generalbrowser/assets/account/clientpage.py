@@ -1,5 +1,5 @@
 
-from generalgui import Label, Button, Page
+from generalgui import Label, Button, Page, Entry, Password
 from generalbrowser.base.clientpage import GeneralModelPage, GeneralClientPage
 
 
@@ -15,8 +15,8 @@ class _SigninPage(GeneralClientPage):
         self.password.text = "hellothere"
 
         buttons = Page(self)
-        self.button_signin = Button(buttons, "Sign in", self.signin)
-        self.button_register = Button(buttons, "Register", self.register)
+        self.button_signin = Button(buttons, "Sign in", parent.signin)
+        self.button_register = Button(buttons, "Register", parent.register)
 
 
 class _SignedInPage(GeneralModelPage):
@@ -42,8 +42,7 @@ class AccountPage(GeneralClientPage):
         account = self.client.deserialize(response=response)[0]
         account.create_page(parent=self.mainpage)
 
-
-    def hook_signin_success(self, response): ...
+    # def hook_signin_success(self, response): ...
 
     def signin(self):
         email = self.sign_in_page.email.text

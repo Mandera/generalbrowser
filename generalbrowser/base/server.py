@@ -1,10 +1,9 @@
 
 from rest_framework.response import Response
 from django.http import HttpResponse
-from dill import dumps
 
 from generalbrowser.base.client_and_server import _GeneralClientAndServer
-from generallibrary import getBaseClassNames
+from generallibrary import getBaseClassNames, dumps
 
 
 class GeneralServer(_GeneralClientAndServer):
@@ -39,7 +38,8 @@ class GeneralServer(_GeneralClientAndServer):
         """ Todo: Send client models in header instead? That way we can serialize inside success method instead.
             Convert django models to client models. """
         client_models = [model.create_client_model() for model in models]
-        return HttpResponse(dumps(client_models), content_type="application/octet-stream", headers={"testing": 5})
+        return HttpResponse(dumps(client_models), headers={"testing": 5})
+        # return HttpResponse(dumps(client_models), content_type="application/octet-stream", headers={"testing": 5})
 
     @staticmethod
     def success(msg=None, files=None, code=None):
