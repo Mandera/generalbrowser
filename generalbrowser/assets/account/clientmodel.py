@@ -1,5 +1,5 @@
 
-from generalbrowser.base.clientmodel import GeneralClientModel
+from generalbrowser.assets.base.clientmodel import GeneralClientModel
 from generalbrowser.assets.account.clientpage import _SignedInPage
 
 

@@ -1,5 +1,5 @@
 
-from generalbrowser import GeneralClient
+from generalbrowser.assets.base.client import GeneralClient
 
 
 class AccountClient(GeneralClient):

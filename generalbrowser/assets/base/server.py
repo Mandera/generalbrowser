@@ -2,14 +2,38 @@
 from rest_framework.response import Response
 from django.http import HttpResponse
 
-from generalbrowser.base.client_and_server import _GeneralClientAndServer
-from generallibrary import getBaseClassNames, dumps
+from generalbrowser.assets.base.client_and_server import _GeneralClientAndServer
+from generallibrary import getBaseClassNames, dumps, deco_optional_suppress
 
 
 class GeneralServer(_GeneralClientAndServer):
     """ Server methods to talk to client. """
+    _token = ...
+    _account_cls = ...
+
     def __init__(self):
+        assert self._token is not Ellipsis
         assert "APIView" in getBaseClassNames(self)  # from rest_framework.views import APIView
+
+    @deco_optional_suppress(Exception, return_bool=False)
+    def account(self, error=True):
+        """ Return account or None if error is False. """
+        # Raise HttpResponse? If not signed in
+        return self._account_cls.objects.get(pk=self.session("account_pk"))
+
+    def signin(self, account):
+        self.session(account_pk=account.pk)
+
+    def signout(self):
+        self.session(account_pk=None)
+
+
+    def auth_token(self):
+        """ Authorize token for server-to-server. """
+        assert self._token is not Ellipsis
+        token, = self.extract_data("token")
+        if token != self._token:
+            self.fail("Invalid token")
 
     def session(self, *args, **kwargs):
         """ Set session values with kwargs and return session values with args.

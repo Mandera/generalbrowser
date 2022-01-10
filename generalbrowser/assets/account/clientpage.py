@@ -1,6 +1,6 @@
 
 from generalgui import Label, Button, Page, Entry, Password
-from generalbrowser.base.clientpage import GeneralModelPage, GeneralClientPage
+from generalbrowser.assets.base.clientpage import GeneralModelPage, GeneralClientPage
 
 
 class _SigninPage(GeneralClientPage):
