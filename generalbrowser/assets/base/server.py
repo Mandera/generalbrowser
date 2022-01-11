@@ -35,13 +35,15 @@ class GeneralServer(_GeneralClientAndServer):
         if token != self._token:
             self.fail("Invalid token")
 
-    def session(self, *args, **kwargs):
+    def session(self, arg=None, **kwargs):
         """ Set session values with kwargs and return session values with args.
 
-            :param rest_framework.views.APIView or GeneralServer self: """
+            :param rest_framework.views.APIView or GeneralServer self:
+            :param arg: Optional key arg to return session value of. """
         for key, value in kwargs.items():
             self.request.session[key] = value
-        return [self.request.session[key] for key in args]
+        if arg is not None:
+            return self.request.session[arg]
 
     @property
     def data(self):

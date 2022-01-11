@@ -4,8 +4,6 @@ from generalgui import Page
 
 class GeneralClientPage(Page):
     """ All pages (parts even?) in a browser gui should inherit this. """
-    client_cls = ...
-
     def __init__(self, client=None, parent=None):
         self.client = getattr(self.get_parent(), "client", client)
         assert self.client

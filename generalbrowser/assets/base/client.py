@@ -68,9 +68,9 @@ class GeneralClient(_GeneralClientAndServer):
             :param filepath: Path to file or None. """
         return self._request(method=self.session.get, endpoint=endpoint, filepath=filepath, **data)
 
-    def deserialize(self, response):
+    def deserialize(self, response, scope=None):
         """ Return list of client models. """
-        return loads(response.text)
+        return loads(response.text, scope=scope)
 
     @staticmethod
     def render_response(response):

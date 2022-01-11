@@ -11,6 +11,9 @@ class GeneralAccountModel(GeneralModel):
     email = models.EmailField()
     password = models.CharField(max_length=100)
 
+    class Meta:
+        abstract = True
+
     def hash_password(self): ...
 
     def __str__(self):

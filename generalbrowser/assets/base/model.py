@@ -1,10 +1,15 @@
 
+from django.db import models
+
 from generallibrary import SigInfo, getBaseClassNames
 
 
-class GeneralModel:
+class GeneralModel(models.Model):
     """ Server model methods. """
     _client_model_cls = ...
+
+    class Meta:
+        abstract = True
 
     # def __init__(self):  # Not sure if init is ever called
     #     assert "Model" in getBaseClassNames(self)  # from django.db.models import Model

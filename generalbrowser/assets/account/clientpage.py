@@ -3,7 +3,7 @@ from generalgui import Label, Button, Page, Entry, Password
 from generalbrowser.assets.base.clientpage import GeneralModelPage, GeneralClientPage
 
 
-class _SigninPage(GeneralClientPage):
+class _SigninForm(GeneralClientPage):
     """ General sign in Page. """
     def __init__(self, parent):
         self.label = Label(self, "Welcome")
@@ -19,36 +19,37 @@ class _SigninPage(GeneralClientPage):
         self.button_register = Button(buttons, "Register", parent.register)
 
 
-class _SignedInPage(GeneralModelPage):
+class _GeneralAccountPage(GeneralModelPage):
     def __init__(self, model, parent):
-        self.label = Label(self, f"Signed in as {self.model.email}", side="left")
-        self.button_signout = Button(self, "Sign out", self.account_page.signout, side="left")
+        self.status_page = Page(self)
+        self.label = Label(self.status_page, f"Signed in as {self.model.email}", side="left")
+        self.button_signout = Button(self.status_page, "Sign out", self.get_parent().signout, side="left")
 
 
-class AccountPage(GeneralClientPage):
+class GeneralSigninPage(GeneralClientPage):
     def __init__(self, parent=None):
-        self.sign_in_page = _SigninPage(parent=self)
+        self.sign_in_page = _SigninForm(parent=self)
+        self.signed_in_page = None
 
-        self.signed_in_page = _SignedInPage
+        self.signin(use_form=False)  # See if stored in session
 
+    def hook_signin_success(self, response): ...
 
-        response = self.client.is_signed_in()
+    def signin(self, use_form=True):
+        if use_form:
+            email = self.sign_in_page.email.text
+            password = self.sign_in_page.password.text
+            response = self.client.signin(email=email, password=password)
+        else:
+            response = self.client.is_signed_in()
+
         if response.status_code == 200:
-            self.hook_signin_success(response=response)
+            from generalbrowser.assets.account.clientmodel import AccountClientModel
+            account = self.client.deserialize(response=response, scope=locals())[0]
 
-    def hook_signin_success(self, response):
-        self.exists = False
+            self.sign_in_page.exists = False
+            self.signed_in_page = account.create_page(parent=self.mainpage)
 
-        account = self.client.deserialize(response=response)[0]
-        account.create_page(parent=self.mainpage)
-
-    # def hook_signin_success(self, response): ...
-
-    def signin(self):
-        email = self.sign_in_page.email.text
-        password = self.sign_in_page.password.text
-        response = self.client.signin(email=email, password=password)
-        if response.status_code == 200:
             self.hook_signin_success(response=response)
         else:
             self.sign_in_page.label.text = response.text
@@ -66,4 +67,6 @@ class AccountPage(GeneralClientPage):
         if response.status_code == 200:
             self.sign_in_page.exists = True
             self.signed_in_page.exists = False
+        else:
+            self.sign_in_page.label.text = response.text
         return response

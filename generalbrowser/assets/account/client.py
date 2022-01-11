@@ -1,8 +1,11 @@
 
 from generalbrowser.assets.base.client import GeneralClient
+from generalbrowser.assets.account.clientpage import GeneralSigninPage
 
 
 class AccountClient(GeneralClient):
+    client_page = GeneralSigninPage
+
     def register(self, email, password):
         """ :param MainframeClient self: """
         return self.post(endpoint="account", email=email, password=password)
