@@ -19,7 +19,7 @@ class _SigninForm(GeneralClientPage):
         self.button_register = Button(buttons, "Register", parent.register)
 
 
-class _GeneralAccountPage(GeneralModelPage):
+class GeneralAccountPage(GeneralModelPage):
     def __init__(self, model, parent):
         self.status_page = Page(self)
         self.label = Label(self.status_page, f"Signed in as {self.model.email}", side="left")
@@ -44,7 +44,8 @@ class GeneralSigninPage(GeneralClientPage):
             response = self.client.is_signed_in()
 
         if response.status_code == 200:
-            from generalbrowser.assets.account.clientmodel import AccountClientModel
+            from generalbrowser.assets.account.clientmodel import AccountClientModel  # How do we supply dynamic child class here
+
             account = self.client.deserialize(response=response, scope=locals())[0]
 
             self.sign_in_page.exists = False
