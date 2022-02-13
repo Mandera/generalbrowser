@@ -27,7 +27,7 @@ class GeneralAccountPage(GeneralModelPage):
 
 
 class GeneralSigninPage(GeneralClientPage):
-    def __init__(self, parent=None):
+    def __init__(self, client=None, parent=None):
         self.sign_in_page = _SigninForm(parent=self)
         self.signed_in_page = None
 

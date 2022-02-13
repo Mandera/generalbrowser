@@ -15,8 +15,14 @@ class GeneralClient(_GeneralClientAndServer):
     debug = False
 
     client_page = ...
+    domain_default = None
 
-    def __init__(self, domain):
+    def __init__(self, domain=None):
+        if domain is None:
+            domain = self.domain_default
+        assert domain
+        if domain.endswith("/"):
+            domain = domain[:-1]
         self.domain = domain
 
         stored_session = self.session_path.pickle.read(default=None)
