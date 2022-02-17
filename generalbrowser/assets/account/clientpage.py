@@ -27,7 +27,14 @@ class GeneralAccountPage(GeneralModelPage):
 
 
 class GeneralSigninPage(GeneralClientPage):
+    _account_client_model_cls = ...
+
     def __init__(self, client=None, parent=None):
+        if self._account_client_model_cls is Ellipsis:
+            # Ugly circular import fix
+            from generalbrowser.assets.account.clientmodel import AccountClientModel
+            self._account_client_model_cls = AccountClientModel
+
         self.sign_in_page = _SigninForm(parent=self)
         self.signed_in_page = None
 
@@ -44,9 +51,14 @@ class GeneralSigninPage(GeneralClientPage):
             response = self.client.is_signed_in()
 
         if response.status_code == 200:
-            from generalbrowser.assets.account.clientmodel import AccountClientModel  # How do we supply dynamic child class here
-
-            account = self.client.deserialize(response=response, scope=locals())[0]
+            # from generalmainframe.assets.account.clientmodel import MainframeAccountClientModel
+            # from generalbrowser.assets.account.clientmodel import AccountClientModel
+            # How do we supply dynamic child class here
+            # Maybe we can put class in self and make deserialize look there too
+            # HERE ** Trying to make it work by defining _account_client_model_cls here and in MainframeSigninPage but just realized this shouldn't be in the GUI...
+            scope = locals().copy()
+            scope[self._account_client_model_cls.__name__] = self._account_client_model_cls
+            account = self.client.deserialize(response=response, scope=scope)[0]
 
             self.sign_in_page.exists = False
             self.signed_in_page = account.create_page(parent=self.mainpage)
