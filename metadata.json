@@ -2,7 +2,7 @@
     "enabled": false,
     "private": false,
     "name": "generalbrowser",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "description": "Missing description.",
     "install_requires": [
         "generallibrary",
