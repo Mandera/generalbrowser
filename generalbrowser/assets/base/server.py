@@ -5,6 +5,8 @@ from django.http import HttpResponse
 from generalbrowser.assets.base.client_and_server import _GeneralClientAndServer
 from generallibrary import getBaseClassNames, dumps, deco_optional_suppress
 
+import json
+
 
 class GeneralServer(_GeneralClientAndServer):
     """ Server methods to talk to client. """
@@ -35,14 +37,16 @@ class GeneralServer(_GeneralClientAndServer):
         if token != self._token:
             self.fail("Invalid token")
 
-    def session(self, arg=None, **kwargs):
+    def session(self, arg=..., **kwargs):
         """ Set session values with kwargs and return session values with args.
 
             :param rest_framework.views.APIView or GeneralServer self:
             :param arg: Optional key arg to return session value of. """
         for key, value in kwargs.items():
             self.request.session[key] = value
-        if arg is not None:
+        if arg is Ellipsis:
+            return self.request.session
+        else:
             return self.request.session[arg]
 
     @property
@@ -50,6 +54,8 @@ class GeneralServer(_GeneralClientAndServer):
         """ Dictionary of POST values.
 
             :param rest_framework.views.APIView or GeneralServer self: """
+        if "json" in self.request.content_type:
+            return self.request.data
         return self.request.POST.dict()
 
     def extract_data(self, *keys, default=...):

@@ -17,6 +17,7 @@ class GeneralModel(models.Model):
     def create_client_model(self):
         """ Create a client model class for server models attributes.
             Recursively creates ClientModels for attrs that might be another model. """
+        assert self._client_model_cls not in (Ellipsis, None)
         kwargs = {}
         for name in SigInfo(self._client_model_cls.__init__).names:
             if name == "self":
