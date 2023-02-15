@@ -55,7 +55,7 @@ class GeneralSigninPage(GeneralClientPage):
             # from generalbrowser.assets.account.clientmodel import AccountClientModel
             # How do we supply dynamic child class here
             # Maybe we can put class in self and make deserialize look there too
-            # HERE ** Trying to make it work by defining _account_client_model_cls here and in MainframeSigninPage but just realized this shouldn't be in the GUI...
+            # Trying to make it work by defining _account_client_model_cls here and in MainframeSigninPage but just realized this shouldn't be in the GUI...
             scope = locals().copy()
             scope[self._account_client_model_cls.__name__] = self._account_client_model_cls
             account = self.client.deserialize(response=response, scope=scope)[0]
